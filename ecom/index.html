@@ -114,12 +114,34 @@
         }
 
         /* PORTFOLIO (Gambar) */
-        .portfolio-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
             margin-top: 30px;
+        }
+        .portfolio-item {
+            background-color: #FAFAFA;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 250px; /* Tinggi tetap untuk konsistensi */
+            object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+            display: block;
+        }
+        .portfolio-item p {
+            padding: 15px;
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
         }
 
         /* CONTACT/BUTTON STYLE */
@@ -183,7 +205,7 @@
                 margin: 0 10px;
                 display: block;
             }
-            .service-grid {
+            .service-grid, .portfolio-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -256,8 +278,24 @@
             <h2>Portofolio Unggulan</h2>
             <p>Lihatlah kualitas dan desain modern kami. Kami selalu mengikuti tren terbaru!</p>
             
-            http://googleusercontent.com/image_generation_content/0
-            <p style="font-size: 0.8em; color: #777;">*Gaya: Ombre & Marble Gel Polish. Elegan dan Minimalis.</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="gambar/nail (1).jpeg" alt="Contoh Nail Art Desain Modern">
+                    <p>Nail Art Desain Modern</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="gambar/nail (3).jpeg" alt="Nail Art dengan Bintang dan Ornamen">
+                    <p>Nail Art Gel dengan Bintang dan Ornamen</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="gambar/nail (2).jpeg" alt="Desain Kuku Bertema Kucing dan Bintang">
+                    <p>Desain Kuku Minimalis Tema Kucing & Bintang</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="gambar/nail (4).png" alt="Nail Art Gel Polish Warna Coklat Beige">
+                    <p>Nail Art Gel Polish Nuansa Coklat Beige</p>
+                </div>
+            </div>
             
             <p style="margin-top: 30px;">Kunjungi media sosial kami untuk melihat koleksi desain yang lebih lengkap.</p>
         </section>
@@ -315,3 +353,4 @@
 
 </body>
 </html>
+`

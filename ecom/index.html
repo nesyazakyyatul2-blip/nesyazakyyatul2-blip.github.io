@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cha'5 Nails - Home Service Nail Art & Perawatan Kuku</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BASE & TYPOGRAPHY */
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #FFFFFF; /* Latar belakang putih bersih */
+            color: #333333; 
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: auto; 
+            padding: 0 30px; 
+            overflow: hidden; 
+        }
+        h2 { 
+            font-size: 2.2em; 
+            color: #FF69B4; /* Aksen Pink */
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #FF69B4;
+            margin: 10px auto 0;
+        }
+        h3 { color: #555555; font-weight: 400; margin-top: 30px; }
+
+        /* HEADER & NAVIGATION */
+        header { 
+            background-color: #FFF0F5; /* Light Pink/Misty Rose */
+            padding: 50px 0; 
+            text-align: center; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 3.5em; 
+            color: #333333; 
+            font-weight: 700;
+        }
+        .tagline { 
+            font-style: normal; 
+            margin-top: 10px; 
+            color: #777;
+        }
+        
+        nav { 
+            background-color: #333333; 
+            padding: 15px 0; 
+            position: sticky; /* Sticky nav untuk interaktivitas */
+            top: 0;
+            z-index: 1000;
+        }
+        nav a { 
+            color: white; 
+            margin: 0 20px; 
+            text-decoration: none; 
+            font-weight: 400; 
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FF69B4; /* Efek hover interaktif */
+        }
+        
+        /* SECTIONS & CONTENT */
+        section { 
+            padding: 80px 0; 
+            border-bottom: 1px solid #EEEEEE; 
+        }
+
+        /* LAYANAN GRID (Minimalist Card) */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .service-card {
+            background-color: #FAFAFA;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+        .service-card:hover {
+            transform: translateY(-5px); /* Efek hover interaktif */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #FF69B4;
+        }
+        .service-card h4 {
+            color: #FF69B4;
+            margin-top: 0;
+            font-weight: 600;
+        }
+        .service-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* PORTFOLIO (Gambar) */
+        .portfolio-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            margin-top: 30px;
+        }
+
+        /* CONTACT/BUTTON STYLE */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #FF69B4;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background-color: #E05A9F; /* Sedikit lebih gelap saat hover */
+            transform: scale(1.05); /* Interaksi skala */
+        }
+        
+        /* TABLE STYLE (Minimalist) */
+        .minimal-table table {
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .minimal-table th, .minimal-table td { 
+            padding: 15px; 
+            text-align: left; 
+            border-bottom: 1px solid #eee;
+        }
+        .minimal-table th { 
+            background-color: #FF69B4; 
+            color: white; 
+            font-weight: 600;
+        }
+        .minimal-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* FOOTER */
+        footer { 
+            background-color: #333333; 
+            color: #AAAAAA; 
+            text-align: center; 
+            padding: 25px 0; 
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            nav a {
+                margin: 0 10px;
+                display: block;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Cha'5 Nails</h1>
+            <p class="tagline">Layanan Nail Art Home Service Terdepan: Kualitas, Kenyamanan, dan Desain Inovatif.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#tentang">Tentang</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#portofolio">Portofolio</a>
+            <a href="#harga">Harga</a>
+            <a href="#kontak">Pesan</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <section id="tentang">
+            <h2>Tentang Cha'5 Nails</h2>
+            <p style="text-align: center;">Cha'5 Nails adalah penyedia jasa **nail art** dan perawatan kuku profesional dengan fokus pada layanan **Home Service**. Kami bertujuan menawarkan kenyamanan, kualitas, dan desain kuku yang *stylish* dan *up-to-date* tanpa pelanggan perlu keluar rumah.</p>
+            
+            <h3>Visi & Misi Kami</h3>
+            <ul>
+                <li><strong>Visi:</strong> Menjadi penyedia jasa *nail art home service* terdepan yang dikenal karena kualitas, profesionalisme, dan inovasi desain.</li>
+                <li><strong>Misi:</strong></li>
+                <ul>
+                    <li>Memberikan pelayanan nail art dan perawatan kuku yang higienis, nyaman, dan berkualitas tinggi di lokasi pelanggan.</li>
+                    <li>Mengikuti tren nail art terbaru dan menyediakan beragam pilihan desain.</li>
+                    <li>Membangun hubungan jangka panjang dengan pelanggan melalui kepuasan dan loyalitas.</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section id="layanan">
+            <h2>Layanan Eksklusif Kami</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h4>Basic Manicure/Pedicure</h4>
+                    <p>Perawatan dasar kuku tangan/kaki (membersihkan, membentuk kuku, perawatan kutikula).</p>
+                </div>
+                <div class="service-card">
+                    <h4>Gel Polish & Nail Art</h4>
+                    <p>Aplikasi kutek gel satu warna yang tahan lama atau dengan beragam desain (Ombre, French, Marble, Karakter, dll.).</p>
+                </div>
+                <div class="service-card">
+                    <h4>Nail Extension & Custom Press-On</h4>
+                    <p>Penambahan panjang kuku menggunakan gel/polygel atau pembuatan kuku palsu (*press-on*) custom sesuai permintaan.</p>
+                </div>
+            </div>
+            
+            <h3>Standar Operasional & Higienitas</h3>
+            <p>Kami menjamin profesionalisme dan kebersihan pada setiap layanan:</p>
+            <ul>
+                <li>Semua alat (gunting kuku, *pusher*, *nipper*) akan disterilkan setelah setiap penggunaan.</li>
+                <li>Penggunaan alat sekali pakai (*nail file*, *buffer*) untuk setiap pelanggan.</li>
+                <li>Terapis wajib menggunakan masker dan sarung tangan saat bekerja.</li>
+            </ul>
+        </section>
+
+        <section id="portofolio" style="text-align: center;">
+            <h2>Portofolio Unggulan</h2>
+            <p>Lihatlah kualitas dan desain modern kami. Kami selalu mengikuti tren terbaru!</p>
+            
+            http://googleusercontent.com/image_generation_content/0
+            <p style="font-size: 0.8em; color: #777;">*Gaya: Ombre & Marble Gel Polish. Elegan dan Minimalis.</p>
+            
+            <p style="margin-top: 30px;">Kunjungi media sosial kami untuk melihat koleksi desain yang lebih lengkap.</p>
+        </section>
+
+        <section id="harga">
+            <h2>Estimasi Harga</h2>
+            <div class="minimal-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Layanan</th>
+                            <th>Harga (Estimasi)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basic Manicure Gel Polish</td>
+                            <td>Rp75.000 - Rp90.000</td>
+                        </tr>
+                        <tr>
+                            <td>Nail Art Simple (2 jari)</td>
+                            <td>+ Rp15.000 - Rp25.000</td>
+                        </tr>
+                        <tr>
+                            <td>Full Nail Art</td>
+                            <td>Rp150.000 - Rp250.000</td>
+                        </tr>
+                        <tr>
+                            <td>Biaya Transportasi Home Service</td>
+                            <td>Rp10.000 - Rp30.000 (tergantung jarak)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="kontak" style="text-align: center;">
+            <h2>Pesan Layanan Anda Sekarang!</h2>
+            
+            <h3>Target Pelanggan Utama</h3>
+            <p>Layanan kami sempurna untuk wanita usia 18-35 tahun, terutama pekerja, mahasiswa, atau ibu rumah tangga yang memiliki keterbatasan waktu.</p>
+            
+            <p>Gunakan sistem **booking online** kami (via *chat* WhatsApp/DM Instagram) untuk mengatur jadwal dengan efisien.</p>
+            
+            <a href="[Link WA Anda]" class="cta-button">BOOKING VIA WHATSAPP</a>
+            
+            <p style="margin-top: 15px; font-size: 0.9em;">Jangan lewatkan **Promo Awal** seperti diskon atau *free nail art* untuk 5 pelanggan pertama!</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cha'5 Nails. Jasa Kecantikan Kuku Konsep Home Service.</p>
+    </footer>
+
+</body>
+</html>
